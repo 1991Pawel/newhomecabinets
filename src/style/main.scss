@@ -1,0 +1,38 @@
+@import "./base/mixin";
+@import "./base/variables";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./pages/index";
+
+.slider-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  border: 1px solid red;
+}
+
+.slider {
+  //   position: absolute;
+  height: 100vh;
+  background: #000;
+  width: 100%;
+
+  img {
+  }
+}
+
+// <div className="slider-container">
+//       <div className="slider">
+//       <h2 className="slider__title">Slider text</h2>
+//       <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+//       Voluptates sint qui quas adipisci placeat corporis.</p>
+//       <img src={slide1} alt="test"/>
+//       </div>
+//       <div className="slider">
+//       <h2 className="slider__title">Slider text</h2>
+//       <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+//       Voluptates sint qui quas adipisci placeat corporis.</p>
+//       <img src={slide2} alt="test"/>
+//       </div>
