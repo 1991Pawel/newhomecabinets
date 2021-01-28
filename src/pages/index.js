@@ -41,6 +41,9 @@ React.useEffect(() => {
           </div>
       ))} 
       </div>
+      <div className="intro__slogan">
+       <p>make your dream come true.</p>
+      </div>
       </div>
      <Footer/>
     </main>

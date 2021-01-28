@@ -1,10 +1,4 @@
 @mixin respond($breakpoint) {
-  // Phone-xs
-  @if $breakpoint == phone-xs {
-    @media (max-width: 20em) {
-      @content;
-    } //0 - 320px
-  }
   // Phone
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
@@ -12,13 +6,13 @@
     } //0 - 600px
   }
   // Table Portrait
-  @if $breakpoint == tab-port {
+  @if $breakpoint == tablet {
     @media (max-width: 56.25em) {
       @content;
     } //900px
   }
   // Table Landscape
-  @if $breakpoint == tab-land {
+  @if $breakpoint == laptop {
     @media (max-width: 75em) {
       @content;
     } //1200px

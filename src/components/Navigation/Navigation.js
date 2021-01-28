@@ -20,10 +20,10 @@ const links = [
 
 
 
-export const Navigation = () => {
+export const Navigation = ({open}) => {
    return (
     <nav className="nav">
-    <ul>
+    <ul className={open ? 'active' : null}>
         {links.map((link) => (
             <li key={link.name}>
             <a href="">{link.name}</a>

@@ -1,0 +1,75 @@
+@import "../../style/base/mixin";
+
+@mixin hamburger-line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+@mixin hamburger {
+  padding: 10px;
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin-left: auto;
+  z-index: 9999;
+  position: fixed;
+  right: 1rem;
+  background-color: rgb(207, 207, 207);
+  @include respond(tablet) {
+    display: block;
+  }
+}
+
+.hamburger {
+  @include hamburger;
+}
+
+.hamburger__active {
+  @include hamburger;
+
+  .hamburger__inner {
+    background-color: transparent;
+  }
+
+  .hamburger__inner:before {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger__inner:after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  @include hamburger-line;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  @include hamburger-line;
+
+  content: "";
+  left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}

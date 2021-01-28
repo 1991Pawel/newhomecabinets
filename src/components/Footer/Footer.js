@@ -33,6 +33,6 @@ export const Footer = () =>  (
         </div>
     </div>
     </div>
-    <p className="footer__copyright">© 2020 P.L All Rights Reserved</p>
+    <p className="footer__copyright">© 2021 P.L All Rights Reserved</p>
     </div>
 )

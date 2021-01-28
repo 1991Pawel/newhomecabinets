@@ -1,17 +1,19 @@
+@import "../../style/base/mixin";
 .header {
   min-height: 5rem;
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 0;
   margin: 0 auto;
 }
 
 .logo {
   height: auto;
-  width: 180px;
+  width: 160px;
   flex-shrink: 0;
 
   img {
+    display: block;
     height: 100%;
     width: 100%;
   }

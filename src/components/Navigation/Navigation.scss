@@ -1,14 +1,41 @@
+@import "../../style/base/mixin";
 .nav {
   margin-left: auto;
+
   ul {
     display: flex;
+    z-index: 99;
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  ul.active {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(41, 41, 41);
+    color: #fff;
   }
   li {
     list-style: none;
     margin-left: 2rem;
+
+    @include respond(tablet) {
+      margin: 2rem;
+    }
   }
   a {
     text-transform: uppercase;
     color: #2a2a2a;
+    padding: 0.2rem;
+    @include respond(tablet) {
+      color: #fff;
+    }
   }
 }
