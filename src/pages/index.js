@@ -1,71 +1,50 @@
-import * as React from "react";
+import * as React  from "react";
 import "../style/main.scss";
-import {Navigation} from '../components/Navigation/Navigation';
-import slide1 from '../images/slide1.jpg'
-import slide2 from '../images/slide2.jpg'
-import slide3 from '../images/slide3.jpg'
-import slide4 from '../images/slide4.jpg'
-import slide5 from '../images/slide5.jpg'
+import { Header } from "../components/Header/Header";
+import {Footer} from '../components/Footer/Footer'
+import slide1 from "../images/slide1.jpg";
+import slide2 from "../images/slide2.jpg";
+import slide3 from "../images/slide3.jpg";
+import slide4 from "../images/slide4.jpg";
+import slide5 from "../images/slide5.jpg";
 
-
-
-
+const slides = [slide1,slide2,slide3,slide4,slide5];
 
 // markup
 const IndexPage = () => {
+  const [activeSlide,setActiveSlide] = React.useState(0)
+React.useEffect(() => {
+    const interval = setInterval(() => { 
+   
+      setActiveSlide((prev) => (prev + 1) % slides.length) 
+    
+    }, 4000);
+      
+  
+  
+    return () => clearInterval(interval);
+ 
+  },[activeSlide])
+
+
   return (
-    <main>
-    <Navigation/>
-    <div className="slider-container">
-      <div className="slider">
-      <div className="slider__inner">
-      <h2 className="slider__title">Slider text</h2>
-      <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptates sint qui quas adipisci placeat corporis.</p>
-      <img src={slide1} alt="test"/>
+    <>
+    <main className="container">
+    <Header/>
+    <div className="intro">
+      <div className="intro__slider">
+       {slides.map((slide,i) => (
+        <div key={i} className="slider">
+             <div className="slider__inner">
+              <img className={i === activeSlide ? 'active' : null} src={slide} alt="test" />
+            </div> 
+          </div>
+      ))} 
       </div>
       </div>
-      <div className="slider">
-      <div className="slider__inner">
-      <h2 className="slider__title">Slider text</h2>
-      <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptates sint qui quas adipisci placeat corporis.</p>
-      <img src={slide2} alt="test"/>
-      </div>
-     
-      </div>
-      <div className="slider">
-      <div className="slider__inner">
-      <h2 className="slider__title">Slider text</h2>
-      <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptates sint qui quas adipisci placeat corporis.</p>
-      <img src={slide3} alt="test"/>
-      </div>
-     
-      </div>
-      <div className="slider">
-      <div className="slider__inner">
-      <h2 className="slider__title">Slider text</h2>
-      <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptates sint qui quas adipisci placeat corporis.</p>
-      <img src={slide4} alt="test"/>
-      </div>
-     
-      </div>
-      <div className="slider">
-      <div className="slider__inner">
-      <h2 className="slider__title">Slider text</h2>
-      <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Voluptates sint qui quas adipisci placeat corporis.</p>
-      <img src={slide5} alt="test"/>
-      </div>
-     
-      </div>
-    
-     
-</div>
-    
+     <Footer/>
     </main>
+    </>
   );
 };
 

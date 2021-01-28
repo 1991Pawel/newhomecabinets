@@ -2,21 +2,22 @@ import * as React from "react";
 import '../Navigation/Navigation.scss'
 const links = [
     {
-        name:"start"
+        name:"Home"
     },
     {
         name:"about"
     },
     {
-        name:"portfolio"
+        name:"Portfolio"
     },
     {
-        name:"showroom"
+        name:"Showroom"
     },
     {
-        name:"contact"
+        name:"Contact"
     },
 ]
+
 
 
 export const Navigation = () => {
@@ -24,7 +25,7 @@ export const Navigation = () => {
     <nav className="nav">
     <ul>
         {links.map((link) => (
-            <li>
+            <li key={link.name}>
             <a href="">{link.name}</a>
             </li>
         ))}

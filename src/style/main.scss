@@ -5,34 +5,66 @@
 
 @import "./pages/index";
 
-.slider-container {
-  position: relative;
-  height: 100vh;
+.container {
+  height: 100%;
   width: 100%;
-  background: #fff;
-  border: 1px solid red;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__footer {
+    height: 20rem;
+    padding: 2rem;
+    background: #f5f5f7;
+  }
 }
+.intro {
+  position: relative;
+  &__slider {
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+  }
+  &__footer {
+    color: #fff;
+    width: 50%;
+    position: absolute;
+    padding: 2rem;
+    bottom: -5rem;
+    right: 15px;
+    text-transform: uppercase;
+    background: #11373d;
 
-.slider {
-  //   position: absolute;
-  height: 100vh;
-  background: #000;
-  width: 100%;
-
-  img {
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: #8a8a8a;
+    }
+  }
+  &__content {
+    border: 1px solid #fff;
+    padding: 1rem;
   }
 }
 
-// <div className="slider-container">
-//       <div className="slider">
-//       <h2 className="slider__title">Slider text</h2>
-//       <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//       Voluptates sint qui quas adipisci placeat corporis.</p>
-//       <img src={slide1} alt="test"/>
-//       </div>
-//       <div className="slider">
-//       <h2 className="slider__title">Slider text</h2>
-//       <p className="slider__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-//       Voluptates sint qui quas adipisci placeat corporis.</p>
-//       <img src={slide2} alt="test"/>
-//       </div>
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+
+  img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 1s cubic-bezier(0.17, 0.67, 0.87, 0.53) opacity;
+  }
+  img.active {
+    opacity: 1;
+  }
+}
