@@ -1,5 +1,6 @@
 import React from "react";
 import "../Footer/Footer.scss";
+import { FaFacebookSquare, FaRegEnvelope, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => (
   <div className="footer">
@@ -15,10 +16,15 @@ export const Footer = () => (
     </div>
     <div className="socials">
       <div className="socials__inner">
-        <div className="socials__item">Facebook</div>
-        <div className="socials__item">twitter</div>
-        <div className="socials__item">instagram</div>
-        <div className="socials__item">youtube</div>
+        <a className="socials__item">
+          <FaRegEnvelope />
+        </a>
+        <a className="socials__item">
+          <FaFacebookSquare />
+        </a>
+        <a className="socials__item">
+          <FaInstagram />
+        </a>
       </div>
     </div>
     <p className="footer__copyright">© 2021 P.L All Rights Reserved</p>
