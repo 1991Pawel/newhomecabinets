@@ -1,5 +1,5 @@
 import React from "react";
-import "../Layout/Layout";
+import "../Layout/Layout.scss";
 
 import { Helmet } from "react-helmet";
 import { Header } from "../Header/Header";

@@ -1,0 +1,73 @@
+@import "../base/mixin";
+
+.about {
+  &__image {
+    min-height: 50vh;
+    background: #000;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.637),
+        rgba(0, 0, 0, 0.637)
+      ),
+      url("../../images/bg-about.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  &__headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  &__title {
+    font-size: 5rem;
+    @include respond(laptop) {
+      font-size: 4rem;
+    }
+    @include respond(phone) {
+      font-size: 3.5rem;
+    }
+  }
+  &__subtitle {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    @include respond(laptop) {
+      font-size: 2rem;
+    }
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
+    span {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__desc {
+    width: 50%;
+    font-size: 1.8rem;
+    margin: 3rem auto;
+    text-align: center;
+    line-height: 2.5rem;
+
+    span {
+      font-weight: 600;
+    }
+
+    @include respond(tablet) {
+      font-size: 1.7rem;
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+      width: 80%;
+    }
+  }
+}
