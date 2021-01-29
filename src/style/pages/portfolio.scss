@@ -9,19 +9,12 @@
 }
 
 .slide img {
-  min-height: 450px;
+  height: auto;
   width: 100%;
   margin: 0 auto;
-  @include respond(laptop) {
-    min-height: 300px;
-  }
-  @include respond(phone) {
-    min-height: 250px;
-  }
 }
 
 .slide {
-  transform: scale(0.8);
   transition: transform 300ms;
   opacity: 0.5;
 }
@@ -36,14 +29,19 @@
   position: absolute;
   cursor: pointer;
   z-index: 10;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transform: translatey(-50%);
 }
 
 .arrow svg {
-  transition: color 300ms;
 }
 
 .arrow svg:hover {
-  color: #68edff;
+  color: #9d9e9e;
+  transform: translatey;
 }
 
 .next {

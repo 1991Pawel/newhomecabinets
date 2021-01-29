@@ -32,6 +32,7 @@ const Portfolio = () => {
   const settings = {
     infinite: true,
     lazyLoad: true,
+    focusOnSelect: true,
     speed: 300,
     slidesToShow: 3,
     centerMode: true,
