@@ -8,7 +8,7 @@ const About = () => {
       <section className="about">
         <div className="about__image">
           <div className="about__headings">
-            <h2 className="about__title">newhomecabinets</h2>
+            <h2 className="about__title">Newhomecabinets</h2>
             <p className="about__subtitle">
               you just dream.
               <span>we bring it to life</span>
