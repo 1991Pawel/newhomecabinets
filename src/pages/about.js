@@ -1,6 +1,8 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "../components/Layout/Layout";
 
-
-const About = () => <div>HomePage</div>
+const About = () => {
+  return <Layout>About Page</Layout>;
+};
 
 export default About;
