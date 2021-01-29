@@ -18,6 +18,7 @@
 
   @include respond(tablet) {
     display: block;
+    position: fixed;
   }
 }
 .hamburger {

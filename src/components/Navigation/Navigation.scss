@@ -27,6 +27,7 @@
 
     @include respond(tablet) {
       margin: 2rem;
+      margin-left: 0;
     }
   }
   a {
