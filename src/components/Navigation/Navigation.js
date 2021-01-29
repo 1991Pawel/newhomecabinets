@@ -8,16 +8,16 @@ const links = [
   },
   {
     name: "about",
-    to: "about",
+    to: "/about",
   },
   {
     name: "portfolio",
-    to: "portfolio",
+    to: "/portfolio",
   },
 
   {
     name: "contact & quote",
-    to: "contact",
+    to: "/contact",
   },
 ];
 

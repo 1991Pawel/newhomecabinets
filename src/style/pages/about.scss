@@ -52,12 +52,13 @@
   &__desc {
     width: 50%;
     font-size: 1.8rem;
-    margin: 3rem auto;
+    margin: 3.8rem auto;
     text-align: center;
-    line-height: 2.5rem;
+    line-height: 2.7rem;
+    color: #494848;
 
     span {
-      font-weight: 600;
+      font-weight: 500;
     }
 
     @include respond(tablet) {
