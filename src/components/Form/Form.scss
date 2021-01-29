@@ -1,0 +1,22 @@
+.form {
+  max-width: 600px;
+  margin: 5rem auto;
+
+  &__btn {
+    height: 4rem;
+    width: 15rem;
+    border: none;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__error {
+    color: rgb(182, 42, 42);
+  }
+
+  &__message {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

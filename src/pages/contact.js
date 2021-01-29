@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/pages/contact.scss";
 import { Layout } from "../components/Layout/Layout";
+import { Form } from "../components/Form/Form";
 
 const Contact = () => {
   return (
@@ -12,6 +13,7 @@ const Contact = () => {
             <p className="contact__subtitle">We'd love to hear from you!</p>
           </div>
         </div>
+        <Form />
       </section>
     </Layout>
   );

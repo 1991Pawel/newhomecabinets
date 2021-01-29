@@ -56,7 +56,7 @@
 
 .portfolio {
   &__image {
-    min-height: 50vh;
+    max-height: 40vh;
     background: #000;
     background-image: linear-gradient(
         to bottom,
@@ -73,7 +73,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
+    min-height: 40vh;
     width: 100%;
     color: #fff;
     text-transform: uppercase;

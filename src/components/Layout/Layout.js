@@ -1,12 +1,15 @@
 import React from "react";
 import "../Layout/Layout.scss";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Helmet } from "react-helmet";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 
+const queryClient = new QueryClient();
+
 export const Layout = ({ children }) => {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="keywords" content="photography" />
@@ -32,6 +35,6 @@ export const Layout = ({ children }) => {
       <Header />
       <main className="container">{children}</main>
       <Footer />
-    </>
+    </QueryClientProvider>
   );
 };
