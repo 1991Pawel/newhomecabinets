@@ -10,11 +10,9 @@ const links = [
     {
         name:"Portfolio"
     },
+    
     {
-        name:"Showroom"
-    },
-    {
-        name:"Contact"
+        name:"Contact & Quote"
     },
 ]
 

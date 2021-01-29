@@ -18,7 +18,6 @@
 
   @include respond(tablet) {
     display: block;
-    position: fixed;
   }
 }
 .hamburger {
@@ -27,6 +26,7 @@
 
 .hamburger__active {
   @include hamburger;
+  position: fixed;
 
   .hamburger__inner {
     background-color: transparent;
