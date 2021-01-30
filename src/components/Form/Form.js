@@ -49,8 +49,8 @@ export const Form = () => {
       onSubmit={handleSubmit}
     >
       <div className="form__message">
-        {isError && <p className="form__error">Błąd wysyłania</p>}
-        {isSuccess && <p>Wiadomość wysłana</p>}
+        {isError && <p className="form__error">error</p>}
+        {isSuccess && <p>success</p>}
       </div>
       <FormInput
         handleChange={(e) => handleChange(e)}
@@ -81,7 +81,7 @@ export const Form = () => {
         aria-label="message"
       />
       <button disabled={isLoading} className="form__btn" type="submit">
-        {`${isLoading ? "sending..." : "send"}`}
+        {`${isLoading ? "sending..." : "submit"}`}
       </button>
     </form>
   );
