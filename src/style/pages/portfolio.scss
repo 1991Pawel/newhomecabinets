@@ -29,14 +29,11 @@
   position: absolute;
   cursor: pointer;
   z-index: 10;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-content: center;
   transform: translatey(-50%);
-}
-
-.arrow svg {
 }
 
 .arrow svg:hover {

@@ -10,6 +10,7 @@
     padding: 1rem;
     text-align: center;
     font-size: 1.4rem;
+    color: #ccc;
   }
 }
 
@@ -56,7 +57,7 @@
 
 .socials {
   &__inner {
-    border-bottom: 1px solid #c0c0c2;
+    border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: center;
   }
