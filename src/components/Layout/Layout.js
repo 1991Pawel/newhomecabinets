@@ -14,6 +14,7 @@ export const Layout = ({ children }) => {
         <meta charSet="utf-8" />
         <meta name="keywords" content="photography" />
         <title>Newhomecabinets</title>
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
           type="text/css"
