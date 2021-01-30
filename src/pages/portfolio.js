@@ -64,6 +64,7 @@ const Portfolio = () => {
           <Slider {...settings}>
             {images.map((img, idx) => (
               <div
+                key={idx}
                 className={idx === imageIndex ? "slide activeSlide" : "slide"}
               >
                 <img src={img} alt={img} />
@@ -77,10 +78,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-/* <div className="portfolio__image">
-          <div className="portfolio__headings">
-            <h2 className="portfolio__title">Portfolio</h2>
-            <p className="portfolio__subtitle">check our work</p>
-          </div>
-        </div> */

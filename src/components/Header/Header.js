@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navigation } from "../Navigation/Navigation";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
 import "../Header/Header.scss";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.svg";
 
 export const Header = () => {
   const [open, setOpen] = useState(false);
