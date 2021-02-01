@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../style/pages/portfolio.scss";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+
 import Slider from "react-slick";
 import slide1 from "../images/slide1.jpg";
 import slide2 from "../images/slide2.jpg";
@@ -12,6 +15,18 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 const Portfolio = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const images = [slide1, slide2, slide3, slide4, slide5];
+
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "bg-portfolio.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
 
   const NextArrow = ({ onClick }) => {
     return (
@@ -54,12 +69,15 @@ const Portfolio = () => {
   return (
     <Layout>
       <section className="portoflio">
-        <div className="portfolio__image">
+        <BackgroundImage
+          fluid={data.file.childImageSharp.fluid}
+          className="portfolio__image"
+        >
           <div className="portfolio__headings">
             <h2 className="portfolio__title">Portfolio</h2>
             <p className="portfolio__subtitle">check our work</p>
           </div>
-        </div>
+        </BackgroundImage>
         <div className="slide-container">
           <Slider {...settings}>
             {images.map((img, idx) => (

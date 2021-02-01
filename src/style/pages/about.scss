@@ -2,18 +2,14 @@
 
 .about {
   &__image {
-    max-height: 40vh;
-    background: #000;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.637),
-        rgba(0, 0, 0, 0.637)
-      ),
-      url("../../images/bg-about.jpg");
+    position: relative;
+
+    max-height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
   }
+
   &__headings {
     display: flex;
     flex-direction: column;

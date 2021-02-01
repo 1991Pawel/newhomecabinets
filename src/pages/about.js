@@ -1,12 +1,29 @@
 import React from "react";
 import "../style/pages/about.scss";
 import { Layout } from "../components/Layout/Layout";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 const About = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "bg-about.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <section className="about">
-        <div className="about__image">
+        <BackgroundImage
+          fluid={data.file.childImageSharp.fluid}
+          className="about__image"
+        >
           <div className="about__headings">
             <h2 className="about__title">Newhomecabinets</h2>
             <p className="about__subtitle">
@@ -14,7 +31,7 @@ const About = () => {
               <span>we bring it to life</span>
             </p>
           </div>
-        </div>
+        </BackgroundImage>
         <p className="about__desc">
           From design, to flow, to practical use of space, our cabinets can
           transform your private space into the ideal and wonderful place you
