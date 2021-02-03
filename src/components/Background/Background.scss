@@ -2,18 +2,23 @@
 
 .background {
   position: relative;
-  min-height: 10rem;
-  min-width: 10rem;
+  max-height: 40vh;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.705);
+    z-index: -1;
+  }
 
   &__image {
-    max-height: 40vh;
-    background: #000;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.637),
-        rgba(0, 0, 0, 0.637)
-      ),
-      url("../../images/bg-portfolio.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
