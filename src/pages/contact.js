@@ -3,7 +3,7 @@ import "../style/pages/contact.scss";
 import { Layout } from "../components/Layout/Layout";
 import { Form } from "../components/Form/Form";
 import { graphql, useStaticQuery } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+import { Background } from "../components/Background/Background";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -21,15 +21,11 @@ const Contact = () => {
   return (
     <Layout>
       <section className="contact">
-        <BackgroundImage
-          fluid={data.file.childImageSharp.fluid}
-          className="contact__image"
-        >
-          <div className="contact__headings">
-            <h2 className="contact__title">Contact Us</h2>
-            <p className="contact__subtitle">We'd love to hear from you!</p>
-          </div>
-        </BackgroundImage>
+        <Background
+          fluidUrl={data.file.childImageSharp.fluid}
+          title="Contact Us"
+          subtitle="We'd love to hear from you!"
+        />
         <Form />
       </section>
     </Layout>
