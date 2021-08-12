@@ -7,8 +7,11 @@ import slide2 from "../images/slide2.jpg";
 import slide3 from "../images/slide3.jpg";
 import slide4 from "../images/slide4.jpg";
 import slide5 from "../images/slide5.jpg";
+import slide6 from "../images/slide6.jpg";
+import slide7 from "../images/slide7.jpg";
+import slide8 from "../images/slide8.jpg";
 
-const slides = [slide1, slide2, slide3, slide4, slide5];
+const slides = [slide1, slide2, slide3, slide4, slide5,slide6,slide7,slide8];
 
 // markup
 const IndexPage = () => {
