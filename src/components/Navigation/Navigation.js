@@ -11,8 +11,8 @@ const links = [
     to: "/about",
   },
   {
-    name: "portfolio",
-    to: "/portfolio",
+    name: "gallery",
+    to: "/gallery",
   },
 
   {

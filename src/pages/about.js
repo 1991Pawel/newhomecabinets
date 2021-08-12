@@ -22,25 +22,24 @@ const About = () => {
       <section className="about">
         <Background
           fluidUrl={data.file.childImageSharp.fluid}
-          title="Newhomecabinets"
+          title="New home cabinets"
           //span
           subtitle="you just dream we bring it to life"
         />
 
         <p className="about__desc">
-          From design, to flow, to practical use of space, our cabinets can
-          transform your private space into the ideal and wonderful place you
-          call home. <span>Whether you are looking</span> for in-stock cabinets,
-          semi-custom cabinets or custom cabinets we have the
-          <span> perfect cabinet for you</span>.
+        <span>New Home Cabinets</span> is a family-owned business located in Des Plaines, IL, built upon a
+        tradition of <span>high standards of service and quality.</span> Each of us plays a role in the service
+        you receive from concept to completion. A reliable team of designers, master craftsmen,
+        finishers, and installers with many years of experience are committed to work in creating
+        custom cabinetry.
         </p>
         <p className="about__desc">
-          We have many <span>years of experience</span> dealing business with
-          multi-housing and property management companies, supplying
-          high-quality durable cabinets that is sure to catch the eye! Our
-          cabinets are built to last and <span>always look great.</span> At New
-          Home Cabinets we can <span>find you the right cabinets</span> for your
-          dream home today!
+        We are a full-service with complimentary design consultation, and an outstanding customer
+        service support team. We can design <span>indoor and outdoor kitchens, bathrooms, laundry
+        rooms, wet bars, entertainment centers, garage storage, mudrooms, and more - </span>
+        whether you are looking for in-stock, semi-custom or custom cabinets we have the perfect
+        option for you.
         </p>
       </section>
     </Layout>
