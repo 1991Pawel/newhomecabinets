@@ -1,10 +1,10 @@
 .intro {
   margin-bottom: 2rem;
   position: relative;
-  border: 1px solid #bbbbbd;
+  // border: 1px solid #bbbbbd;
   &__slider {
     position: relative;
-    min-height: 70vh;
+    min-height: 80vh;
     width: 100%;
   }
 
@@ -51,20 +51,30 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  &__inner {
+   overflow: hidden;
+  }
+
+
+
 
   
   img {
     min-height: 100%;
     min-width: 100%;
-    object-fit: contain;
     opacity: 0;
-    transition: 1s cubic-bezier(0.17, 0.67, 0.87, 0.53) opacity;
+    object-fit: cover;
+
+   
   }
   img.active {
     opacity: 1;
     display: block;
-    height: 100%;
     width: 100%;
-    object-fit: contain;
+    height: 100%;
   }
 }

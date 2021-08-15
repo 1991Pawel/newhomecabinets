@@ -2,16 +2,13 @@ import * as React from "react";
 import "../style/main.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import { Layout } from "../components/Layout/Layout";
-import slide1 from "../images/slide1.jpg";
-import slide2 from "../images/slide2.jpg";
-import slide3 from "../images/slide3.jpg";
-import slide4 from "../images/slide4.jpg";
-import slide5 from "../images/slide5.jpg";
-import slide6 from "../images/slide6.jpg";
-import slide7 from "../images/slide7.jpg";
-import slide8 from "../images/slide8.jpg";
+import slide1 from "../images/homePage/slide1.jpg";
+import slide2 from "../images/homePage/slide2.jpg";
+import slide3 from "../images/homePage/slide3.jpg";
+import slide4 from "../images/homePage/slide4.jpg";
+import slide5 from "../images/homePage/slide5.jpg";
 
-const slides = [slide1, slide2, slide3, slide4, slide5,slide6,slide7,slide8];
+const slides = [slide1, slide2, slide3, slide4, slide5];
 
 // markup
 const IndexPage = () => {
@@ -24,7 +21,7 @@ const IndexPage = () => {
   }, [activeSlide]);
 
   return (
-    <Layout>
+    <Layout variant="map">
       <div className="wrapper">
         <section className="intro">
           <div className="intro__slider">
@@ -39,9 +36,6 @@ const IndexPage = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="intro__slogan">
-            <p>make your dream come true.</p>
           </div>
         </section>
       </div>

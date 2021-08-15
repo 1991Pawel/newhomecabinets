@@ -1,4 +1,77 @@
 @import "../base/mixin";
 
 .contact {
+  .container {
+    padding: 1rem 0;
+    max-width: 1400px;
+    @media (min-width: 1000px) {
+      display: flex;
+    }
+    @media (max-width: 1400px) {
+      padding: 1rem;
+    }
+  }
+}
+
+.contact-map {
+  padding: 30px 0;
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  &__adress {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: rgb(150, 150, 150);
+    padding-top: 1.8rem;
+    span {
+      font-size: 1.8rem;
+      display: block;
+      color: #000;
+      margin: 1rem 0;
+    }
+  }
+  &__phone {
+    padding-top: 1.8rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: rgb(150, 150, 150);
+    span {
+      font-size: 1.8rem;
+      display: block;
+      color: #000;
+      margin: 1rem 0;
+    }
+  }
+  &__hours {
+    padding-top: 1.8rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: rgb(150, 150, 150);
+    span {
+      font-size: 1.8rem;
+      display: block;
+      color: #000;
+      margin: 1rem 0;
+    }
+  }
+  &__map {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: 1000px) {
+      margin-left: 50px;
+    }
+
+    &:before {
+    }
+
+    img {
+      width: 100%;
+      max-width: 700px;
+    }
+  }
 }

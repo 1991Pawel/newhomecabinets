@@ -14,6 +14,14 @@ import slide7 from "../images/slide7.jpg";
 import slide8 from "../images/slide8.jpg";
 import slide9 from "../images/slide9.jpg";
 import slide10 from "../images/slide10.jpg";
+import slide11 from "../images/slide11.jpg";
+import slide12 from "../images/slide12.jpg";
+import slide13 from "../images/slide13.jpg";
+import slide14 from "../images/slide14.jpg";
+import slide15 from "../images/slide15.jpg";
+import slide16 from "../images/slide16.jpg";
+import slide17 from "../images/slide17.jpg";
+import slide18 from "../images/slide18.jpg";
 import { Layout } from "../components/Layout/Layout";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
