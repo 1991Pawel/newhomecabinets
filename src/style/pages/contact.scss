@@ -57,21 +57,117 @@
       margin: 1rem 0;
     }
   }
+  &__route {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.4rem;
+    background: #000;
+    color: #fff;
+    padding: 1.25rem;
+  }
+
+
+
+  &__map:hover {
+    opacity: .5;
+    
+  }
+ 
+
   &__map {
     max-width: 100%;
     overflow: hidden;
     position: relative;
+    transition: .2s all;
 
     @media (min-width: 1000px) {
       margin-left: 50px;
     }
 
+
     &:before {
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      height: 100%;
+      width: 100%;
+
     }
+
 
     img {
       width: 100%;
       max-width: 700px;
+      
+    }
+
+  }
+}
+
+.how-to-mesure {
+  margin:80px 0;
+  padding: 0 20px;
+  position: relative;
+
+  &__title {
+    span {
+      font-weight: 900;
     }
   }
+
+  &__desc {
+    margin-top: 2rem;
+    max-width: 700px;
+  }
+
+  &__info {
+    margin-top: 40px;
+  }
+  ul {
+    li {
+      margin: 20px;
+    }
+  }
+
+  &__mesure {
+
+    
+    
+
+  }
+
+  &__cta {
+    background: rgb(177, 37, 37);
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    padding: 1rem;
+    position: sticky;
+    top:0;
+    left: 0;
+    right: 0;
+    
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+
+  &__desc {
+    margin: 1.5rem 0;
+
+    span {
+      color: red;
+    }
+
+    &--red {
+      color: red;
+    }
+  }
+
 }
