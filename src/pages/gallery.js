@@ -27,7 +27,18 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const Portfolio = () => {
   const [imageIndex, setImageIndex] = useState(0);
-  const images = [slide1, slide2, slide3, slide4, slide5,slide6,slide7,slide8,slide9,slide10];
+  const images = [
+    slide1,
+    slide2,
+    slide3,
+    slide4,
+    slide5,
+    slide6,
+    slide7,
+    slide8,
+    slide9,
+    slide10,
+  ];
 
   const data = useStaticQuery(graphql`
     query {
@@ -81,7 +92,7 @@ const Portfolio = () => {
 
   return (
     <Layout>
-      <section className="portoflio">
+      <section id="portfolio" className="portoflio">
         {/* <Background
           title="Portoflio"
           subtitle="check our work"
