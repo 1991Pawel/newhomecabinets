@@ -7,6 +7,7 @@ import slide2 from "../images/homePage/slide2.jpg";
 import slide3 from "../images/homePage/slide3.jpg";
 import slide4 from "../images/homePage/slide4.jpg";
 import slide5 from "../images/homePage/slide5.jpg";
+import { Footer } from "../components/Footer/Footer";
 
 const slides = [slide1, slide2, slide3, slide4, slide5];
 
@@ -39,6 +40,7 @@ const IndexPage = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </Layout>
   );
 };
