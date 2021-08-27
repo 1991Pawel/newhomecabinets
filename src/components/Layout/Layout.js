@@ -7,7 +7,7 @@ import { Footer } from "../Footer/Footer";
 
 const queryClient = new QueryClient();
 
-export const Layout = ({ children,variant }) => {
+export const Layout = ({ children, variant }) => {
   return (
     <QueryClientProvider client={queryClient}>
       <Helmet>
@@ -34,7 +34,7 @@ export const Layout = ({ children,variant }) => {
       </Helmet>
       <Header />
       <main className="container">{children}</main>
-      {variant !== 'map' ? <Footer /> : null}
+      {variant !== "map" ? <Footer /> : null}
     </QueryClientProvider>
   );
 };

@@ -10,7 +10,8 @@ import slide5 from "../images/homePage/slide5.jpg";
 import { Footer } from "../components/Footer/Footer";
 
 const slides = [slide1, slide2, slide3, slide4, slide5];
-
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-206094015-1"></script>
 // markup
 const IndexPage = () => {
   const [activeSlide, setActiveSlide] = React.useState(0);
