@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import "../Layout/Layout.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Helmet } from "react-helmet";
@@ -8,6 +8,13 @@ import { Footer } from "../Footer/Footer";
 const queryClient = new QueryClient();
 
 export const Layout = ({ children, variant }) => {
+  useLayoutEffect(() => {
+    window.location.replace("https://www.facebook.com/NewHomeCabinets/");
+  });
+
+  if (true) {
+    return null;
+  }
   return (
     <QueryClientProvider client={queryClient}>
       <Helmet>
